@@ -14,7 +14,10 @@ fixtures = [
 ]
 
 # App modules
-app_include_js = []
+app_include_js = [
+    "/assets/hotel_restaurant_management/js/restaurant_order.js",
+    "/assets/hotel_restaurant_management/js/hotel_booking.js"
+]
 app_include_css = []
 
 # Document Events, Scheduled Tasks, etc. can be added as needed 
