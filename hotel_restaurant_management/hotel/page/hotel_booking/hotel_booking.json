@@ -1,0 +1,7 @@
+{
+    "doctype": "Page",
+    "name": "Hotel Booking",
+    "module": "Hotel",
+    "title": "Hotel Booking",
+    "route": "/app/hotel-booking"
+} 

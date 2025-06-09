@@ -1,0 +1,7 @@
+{
+    "doctype": "Page",
+    "name": "Restaurant Order",
+    "module": "Restaurant",
+    "title": "Restaurant Order",
+    "route": "/app/restaurant-order"
+} 
