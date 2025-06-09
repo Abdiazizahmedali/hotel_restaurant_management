@@ -1,0 +1,21 @@
+{
+    "doctype": "DocType",
+    "name": "Reservation",
+    "module": "Restaurant",
+    "custom": 0,
+    "fields": [
+        {"fieldname": "reservation_number", "fieldtype": "Data", "label": "Reservation Number", "reqd": 1},
+        {"fieldname": "customer_name", "fieldtype": "Data", "label": "Customer Name", "reqd": 1},
+        {"fieldname": "contact_number", "fieldtype": "Data", "label": "Contact Number"},
+        {"fieldname": "reservation_time", "fieldtype": "Datetime", "label": "Reservation Time", "reqd": 1},
+        {"fieldname": "table", "fieldtype": "Link", "label": "Table", "options": "Table"},
+        {"fieldname": "number_of_guests", "fieldtype": "Int", "label": "Number of Guests"},
+        {"fieldname": "status", "fieldtype": "Select", "label": "Status", "options": "Reserved\nArrived\nCancelled\nNo Show\nCompleted", "default": "Reserved"},
+        {"fieldname": "special_requests", "fieldtype": "Small Text", "label": "Special Requests"}
+    ],
+    "permissions": [
+        {"role": "System Manager", "read": 1, "write": 1, "create": 1, "delete": 1},
+        {"role": "Restaurant Manager", "read": 1, "write": 1, "create": 1, "delete": 1},
+        {"role": "Waiter", "read": 1, "create": 1}
+    ]
+} 

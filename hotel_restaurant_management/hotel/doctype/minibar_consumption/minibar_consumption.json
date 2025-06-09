@@ -1,0 +1,20 @@
+{
+    "doctype": "DocType",
+    "name": "Minibar Consumption",
+    "module": "Hotel",
+    "custom": 0,
+    "fields": [
+        {"fieldname": "consumption_number", "fieldtype": "Data", "label": "Consumption Number", "reqd": 1},
+        {"fieldname": "room", "fieldtype": "Link", "label": "Room", "options": "Room", "reqd": 1},
+        {"fieldname": "date", "fieldtype": "Date", "label": "Date", "reqd": 1},
+        {"fieldname": "items", "fieldtype": "Table", "label": "Items", "options": "Minibar Item"},
+        {"fieldname": "total_amount", "fieldtype": "Currency", "label": "Total Amount"},
+        {"fieldname": "status", "fieldtype": "Select", "label": "Status", "options": "Pending\nBilled\nPaid", "default": "Pending"}
+    ],
+    "permissions": [
+        {"role": "System Manager", "read": 1, "write": 1, "create": 1, "delete": 1},
+        {"role": "Hotel Manager", "read": 1, "write": 1, "create": 1, "delete": 1},
+        {"role": "Front Desk", "read": 1, "create": 1}
+    ]
+} 
+ 

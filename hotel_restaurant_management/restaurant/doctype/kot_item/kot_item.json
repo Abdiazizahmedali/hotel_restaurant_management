@@ -1,0 +1,12 @@
+{
+    "doctype": "DocType",
+    "name": "KOT Item",
+    "module": "Restaurant",
+    "istable": 1,
+    "custom": 0,
+    "fields": [
+        {"fieldname": "menu_item", "fieldtype": "Link", "label": "Menu Item", "options": "Menu Item", "reqd": 1},
+        {"fieldname": "qty", "fieldtype": "Float", "label": "Quantity", "reqd": 1},
+        {"fieldname": "notes", "fieldtype": "Small Text", "label": "Notes"}
+    ]
+} 

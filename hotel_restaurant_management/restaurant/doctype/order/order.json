@@ -1,0 +1,21 @@
+{
+    "doctype": "DocType",
+    "name": "Order",
+    "module": "Restaurant",
+    "custom": 0,
+    "fields": [
+        {"fieldname": "order_number", "fieldtype": "Data", "label": "Order Number", "reqd": 1},
+        {"fieldname": "table", "fieldtype": "Link", "label": "Table", "options": "Table"},
+        {"fieldname": "customer", "fieldtype": "Data", "label": "Customer"},
+        {"fieldname": "order_type", "fieldtype": "Select", "label": "Order Type", "options": "Dine-in\nTakeout\nDelivery", "reqd": 1},
+        {"fieldname": "order_time", "fieldtype": "Datetime", "label": "Order Time", "reqd": 1},
+        {"fieldname": "status", "fieldtype": "Select", "label": "Status", "options": "Open\nIn Progress\nServed\nClosed\nCancelled", "default": "Open"},
+        {"fieldname": "total_amount", "fieldtype": "Currency", "label": "Total Amount"},
+        {"fieldname": "order_items", "fieldtype": "Table", "label": "Order Items", "options": "Order Item"}
+    ],
+    "permissions": [
+        {"role": "System Manager", "read": 1, "write": 1, "create": 1, "delete": 1},
+        {"role": "Restaurant Manager", "read": 1, "write": 1, "create": 1, "delete": 1},
+        {"role": "Waiter", "read": 1, "write": 1, "create": 1}
+    ]
+} 

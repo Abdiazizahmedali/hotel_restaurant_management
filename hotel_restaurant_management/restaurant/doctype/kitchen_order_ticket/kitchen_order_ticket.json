@@ -1,0 +1,20 @@
+{
+    "doctype": "DocType",
+    "name": "Kitchen Order Ticket",
+    "module": "Restaurant",
+    "custom": 0,
+    "fields": [
+        {"fieldname": "kot_number", "fieldtype": "Data", "label": "KOT Number", "reqd": 1},
+        {"fieldname": "order", "fieldtype": "Link", "label": "Order", "options": "Order", "reqd": 1},
+        {"fieldname": "table", "fieldtype": "Link", "label": "Table", "options": "Table"},
+        {"fieldname": "items", "fieldtype": "Table", "label": "Items", "options": "KOT Item"},
+        {"fieldname": "status", "fieldtype": "Select", "label": "Status", "options": "Pending\nPreparing\nReady\nServed\nCancelled", "default": "Pending"},
+        {"fieldname": "kot_time", "fieldtype": "Datetime", "label": "KOT Time", "reqd": 1}
+    ],
+    "permissions": [
+        {"role": "System Manager", "read": 1, "write": 1, "create": 1, "delete": 1},
+        {"role": "Restaurant Manager", "read": 1, "write": 1, "create": 1, "delete": 1},
+        {"role": "Chef", "read": 1, "write": 1},
+        {"role": "Waiter", "read": 1, "create": 1}
+    ]
+} 

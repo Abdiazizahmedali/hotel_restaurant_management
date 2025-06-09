@@ -1,0 +1,19 @@
+{
+    "doctype": "DocType",
+    "name": "Room",
+    "module": "Hotel",
+    "custom": 0,
+    "fields": [
+        {"fieldname": "room_number", "fieldtype": "Data", "label": "Room Number", "reqd": 1},
+        {"fieldname": "room_type", "fieldtype": "Select", "label": "Room Type", "options": "Single\nDouble\nSuite\nDeluxe\nOther", "reqd": 1},
+        {"fieldname": "floor", "fieldtype": "Select", "label": "Floor", "options": "Ground Floor\nFirst Floor\nSecond Floor\nOther"},
+        {"fieldname": "status", "fieldtype": "Select", "label": "Status", "options": "Available\nOccupied\nReserved\nOut of Service\nCleaning", "default": "Available"},
+        {"fieldname": "rate", "fieldtype": "Currency", "label": "Rate", "reqd": 1},
+        {"fieldname": "is_active", "fieldtype": "Check", "label": "Is Active", "default": 1}
+    ],
+    "permissions": [
+        {"role": "System Manager", "read": 1, "write": 1, "create": 1, "delete": 1},
+        {"role": "Hotel Manager", "read": 1, "write": 1, "create": 1, "delete": 1},
+        {"role": "Front Desk", "read": 1}
+    ]
+} 

@@ -1,0 +1,15 @@
+{
+    "report_name": "Sales Report",
+    "doctype": "Order",
+    "is_standard": "Yes",
+    "report_type": "Query Report",
+    "ref_doctype": "Order",
+    "columns": [
+        {"label": "Order Number", "fieldname": "order_number", "fieldtype": "Data", "width": 120},
+        {"label": "Order Time", "fieldname": "order_time", "fieldtype": "Datetime", "width": 150},
+        {"label": "Table", "fieldname": "table", "fieldtype": "Link", "options": "Table", "width": 100},
+        {"label": "Order Type", "fieldname": "order_type", "fieldtype": "Data", "width": 100},
+        {"label": "Status", "fieldname": "status", "fieldtype": "Data", "width": 100},
+        {"label": "Total Amount", "fieldname": "total_amount", "fieldtype": "Currency", "width": 120}
+    ]
+} 

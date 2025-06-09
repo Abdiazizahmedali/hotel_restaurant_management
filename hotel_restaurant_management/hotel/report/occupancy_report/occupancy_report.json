@@ -1,0 +1,15 @@
+{
+    "report_name": "Occupancy Report",
+    "doctype": "Room Reservation",
+    "is_standard": "Yes",
+    "report_type": "Query Report",
+    "ref_doctype": "Room Reservation",
+    "columns": [
+        {"label": "Reservation Number", "fieldname": "reservation_number", "fieldtype": "Data", "width": 120},
+        {"label": "Guest Name", "fieldname": "guest_name", "fieldtype": "Data", "width": 150},
+        {"label": "Room", "fieldname": "room", "fieldtype": "Link", "options": "Room", "width": 100},
+        {"label": "Check In", "fieldname": "check_in", "fieldtype": "Datetime", "width": 150},
+        {"label": "Check Out", "fieldname": "check_out", "fieldtype": "Datetime", "width": 150},
+        {"label": "Status", "fieldname": "status", "fieldtype": "Data", "width": 100}
+    ]
+} 

@@ -1,0 +1,22 @@
+{
+    "doctype": "DocType",
+    "name": "Room Reservation",
+    "module": "Hotel",
+    "custom": 0,
+    "fields": [
+        {"fieldname": "reservation_number", "fieldtype": "Data", "label": "Reservation Number", "reqd": 1},
+        {"fieldname": "guest_name", "fieldtype": "Data", "label": "Guest Name", "reqd": 1},
+        {"fieldname": "contact_number", "fieldtype": "Data", "label": "Contact Number"},
+        {"fieldname": "check_in", "fieldtype": "Datetime", "label": "Check In", "reqd": 1},
+        {"fieldname": "check_out", "fieldtype": "Datetime", "label": "Check Out", "reqd": 1},
+        {"fieldname": "room", "fieldtype": "Link", "label": "Room", "options": "Room"},
+        {"fieldname": "number_of_guests", "fieldtype": "Int", "label": "Number of Guests"},
+        {"fieldname": "status", "fieldtype": "Select", "label": "Status", "options": "Reserved\nChecked In\nChecked Out\nCancelled\nNo Show", "default": "Reserved"},
+        {"fieldname": "special_requests", "fieldtype": "Small Text", "label": "Special Requests"}
+    ],
+    "permissions": [
+        {"role": "System Manager", "read": 1, "write": 1, "create": 1, "delete": 1},
+        {"role": "Hotel Manager", "read": 1, "write": 1, "create": 1, "delete": 1},
+        {"role": "Front Desk", "read": 1, "create": 1}
+    ]
+} 

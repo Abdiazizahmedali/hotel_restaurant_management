@@ -1,0 +1,24 @@
+{
+    "doctype": "DocType",
+    "name": "Event Booking",
+    "module": "Hotel",
+    "custom": 0,
+    "fields": [
+        {"fieldname": "event_number", "fieldtype": "Data", "label": "Event Number", "reqd": 1},
+        {"fieldname": "event_name", "fieldtype": "Data", "label": "Event Name", "reqd": 1},
+        {"fieldname": "customer_name", "fieldtype": "Data", "label": "Customer Name", "reqd": 1},
+        {"fieldname": "contact_number", "fieldtype": "Data", "label": "Contact Number"},
+        {"fieldname": "event_date", "fieldtype": "Date", "label": "Event Date", "reqd": 1},
+        {"fieldname": "event_time", "fieldtype": "Time", "label": "Event Time"},
+        {"fieldname": "venue", "fieldtype": "Data", "label": "Venue"},
+        {"fieldname": "package", "fieldtype": "Data", "label": "Package"},
+        {"fieldname": "number_of_guests", "fieldtype": "Int", "label": "Number of Guests"},
+        {"fieldname": "status", "fieldtype": "Select", "label": "Status", "options": "Booked\nOngoing\nCompleted\nCancelled", "default": "Booked"},
+        {"fieldname": "notes", "fieldtype": "Small Text", "label": "Notes"}
+    ],
+    "permissions": [
+        {"role": "System Manager", "read": 1, "write": 1, "create": 1, "delete": 1},
+        {"role": "Hotel Manager", "read": 1, "write": 1, "create": 1, "delete": 1},
+        {"role": "Front Desk", "read": 1, "create": 1}
+    ]
+} 

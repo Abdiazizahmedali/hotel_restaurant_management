@@ -1,0 +1,19 @@
+{
+    "doctype": "DocType",
+    "name": "Housekeeping Task",
+    "module": "Hotel",
+    "custom": 0,
+    "fields": [
+        {"fieldname": "task_number", "fieldtype": "Data", "label": "Task Number", "reqd": 1},
+        {"fieldname": "room", "fieldtype": "Link", "label": "Room", "options": "Room", "reqd": 1},
+        {"fieldname": "assigned_to", "fieldtype": "Link", "label": "Assigned To", "options": "Employee"},
+        {"fieldname": "task_date", "fieldtype": "Date", "label": "Task Date", "reqd": 1},
+        {"fieldname": "status", "fieldtype": "Select", "label": "Status", "options": "Pending\nIn Progress\nCompleted\nCancelled", "default": "Pending"},
+        {"fieldname": "notes", "fieldtype": "Small Text", "label": "Notes"}
+    ],
+    "permissions": [
+        {"role": "System Manager", "read": 1, "write": 1, "create": 1, "delete": 1},
+        {"role": "Hotel Manager", "read": 1, "write": 1, "create": 1, "delete": 1},
+        {"role": "Housekeeping", "read": 1, "write": 1, "create": 1}
+    ]
+} 

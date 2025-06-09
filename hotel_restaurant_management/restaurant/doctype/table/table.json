@@ -1,0 +1,19 @@
+{
+    "doctype": "DocType",
+    "name": "Table",
+    "module": "Restaurant",
+    "custom": 0,
+    "fields": [
+        {"fieldname": "table_number", "fieldtype": "Data", "label": "Table Number", "reqd": 1},
+        {"fieldname": "floor", "fieldtype": "Select", "label": "Floor", "options": "Ground Floor\nFirst Floor\nSecond Floor\nOther"},
+        {"fieldname": "seats", "fieldtype": "Int", "label": "Number of Seats"},
+        {"fieldname": "status", "fieldtype": "Select", "label": "Status", "options": "Available\nOccupied\nReserved\nOut of Service", "default": "Available"},
+        {"fieldname": "current_order", "fieldtype": "Link", "label": "Current Order", "options": "Order"},
+        {"fieldname": "is_active", "fieldtype": "Check", "label": "Is Active", "default": 1}
+    ],
+    "permissions": [
+        {"role": "System Manager", "read": 1, "write": 1, "create": 1, "delete": 1},
+        {"role": "Restaurant Manager", "read": 1, "write": 1, "create": 1, "delete": 1},
+        {"role": "Waiter", "read": 1}
+    ]
+} 

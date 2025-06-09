@@ -1,0 +1,18 @@
+{
+    "doctype": "DocType",
+    "name": "Staff Shift",
+    "module": "Restaurant",
+    "custom": 0,
+    "fields": [
+        {"fieldname": "staff", "fieldtype": "Link", "label": "Staff", "options": "Employee", "reqd": 1},
+        {"fieldname": "role", "fieldtype": "Select", "label": "Role", "options": "Waiter\nChef\nCashier\nManager\nOther"},
+        {"fieldname": "shift_date", "fieldtype": "Date", "label": "Shift Date", "reqd": 1},
+        {"fieldname": "shift_start", "fieldtype": "Time", "label": "Shift Start", "reqd": 1},
+        {"fieldname": "shift_end", "fieldtype": "Time", "label": "Shift End", "reqd": 1},
+        {"fieldname": "status", "fieldtype": "Select", "label": "Status", "options": "Scheduled\nPresent\nAbsent\nCompleted", "default": "Scheduled"}
+    ],
+    "permissions": [
+        {"role": "System Manager", "read": 1, "write": 1, "create": 1, "delete": 1},
+        {"role": "Restaurant Manager", "read": 1, "write": 1, "create": 1, "delete": 1}
+    ]
+} 
