@@ -1,0 +1,14 @@
+{
+  "app_name": "hotel_restaurant_management",
+  "app_title": "Hotel & Restaurant Management",
+  "app_publisher": "Your Name",
+  "app_description": "Comprehensive Restaurant and Hotel Management for ERPNext v15",
+  "app_email": "your@email.com",
+  "app_license": "MIT",
+  "app_icon": "octicon octicon-home",
+  "app_color": "blue",
+  "app_include_js": [],
+  "app_include_css": [],
+  "web_include_js": [],
+  "web_include_css": []
+} 
