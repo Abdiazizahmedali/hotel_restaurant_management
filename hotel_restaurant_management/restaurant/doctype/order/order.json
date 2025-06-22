@@ -5,11 +5,11 @@
     "custom": 0,
     "fields": [
         {"fieldname": "order_number", "fieldtype": "Data", "label": "Order Number", "reqd": 1},
-        {"fieldname": "table", "fieldtype": "Link", "label": "Table", "options": "Table"},
+        {"fieldname": "table", "fieldtype": "Link", "label": "Table", "options": "Table", "db_index": 1},
         {"fieldname": "customer", "fieldtype": "Data", "label": "Customer"},
-        {"fieldname": "order_type", "fieldtype": "Select", "label": "Order Type", "options": "Dine-in\nTakeout\nDelivery", "reqd": 1},
-        {"fieldname": "order_time", "fieldtype": "Datetime", "label": "Order Time", "reqd": 1},
-        {"fieldname": "status", "fieldtype": "Select", "label": "Status", "options": "Open\nIn Progress\nServed\nClosed\nCancelled", "default": "Open"},
+        {"fieldname": "order_type", "fieldtype": "Select", "label": "Order Type", "options": "Dine-in\nTakeout\nDelivery", "reqd": 1, "db_index": 1},
+        {"fieldname": "order_time", "fieldtype": "Datetime", "label": "Order Time", "reqd": 1, "db_index": 1},
+        {"fieldname": "status", "fieldtype": "Select", "label": "Status", "options": "Open\nIn Progress\nServed\nClosed\nCancelled", "default": "Open", "db_index": 1},
         {"fieldname": "total_amount", "fieldtype": "Currency", "label": "Total Amount"},
         {"fieldname": "order_items", "fieldtype": "Table", "label": "Order Items", "options": "Order Item"}
     ],
@@ -18,4 +18,4 @@
         {"role": "Restaurant Manager", "read": 1, "write": 1, "create": 1, "delete": 1},
         {"role": "Waiter", "read": 1, "write": 1, "create": 1}
     ]
-} 
+}  

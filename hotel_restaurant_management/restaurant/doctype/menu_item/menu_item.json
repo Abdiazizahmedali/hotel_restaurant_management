@@ -6,9 +6,9 @@
     "fields": [
         {"fieldname": "item_code", "fieldtype": "Data", "label": "Item Code", "reqd": 1},
         {"fieldname": "item_name", "fieldtype": "Data", "label": "Item Name", "reqd": 1},
-        {"fieldname": "category", "fieldtype": "Select", "label": "Category", "options": "Starter\nMain Course\nDessert\nBeverage\nOther"},
+        {"fieldname": "category", "fieldtype": "Select", "label": "Category", "options": "Starter\nMain Course\nDessert\nBeverage\nOther", "db_index": 1},
         {"fieldname": "price", "fieldtype": "Currency", "label": "Price", "reqd": 1},
-        {"fieldname": "is_available", "fieldtype": "Check", "label": "Is Available", "default": 1},
+        {"fieldname": "is_available", "fieldtype": "Check", "label": "Is Available", "default": 1, "db_index": 1},
         {"fieldname": "description", "fieldtype": "Small Text", "label": "Description"},
         {"fieldname": "image", "fieldtype": "Attach Image", "label": "Image"}
     ],
@@ -17,4 +17,4 @@
         {"role": "Restaurant Manager", "read": 1, "write": 1, "create": 1, "delete": 1},
         {"role": "Waiter", "read": 1}
     ]
-} 
+}  
